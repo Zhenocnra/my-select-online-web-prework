@@ -1,9 +1,12 @@
 def my_select(collection)
-  if block_given?
     i = 0
+    new_collection = []
     while i < collection.length
-      yield
-  else
-    puts "This block should not run!"
-  end 
+      if yield(collection[i]) == true
+        new_collection << collection[1]
+      else
+        puts "This block should not run!"
+      end
+    i += 1
+  end
 end
