@@ -5,8 +5,9 @@ def my_select(collection)
       if yield(collection[i]) == true
         new_collection << collection[1]
       else
-        puts "This block should not run!"
+        nil
       end
     i += 1
   end
+  new_collection
 end
