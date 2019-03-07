@@ -3,5 +3,5 @@ def my_select(collection)
     
   else
     puts "This block should not run!"
-    
+  end 
 end
